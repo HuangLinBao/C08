@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:01:53 by tsabri            #+#    #+#             */
-/*   Updated: 2024/09/07 11:45:34 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/09/09 15:15:56 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,18 @@ void	ft_show_tab(struct s_stock_str *par)
 		ft_putstr(par[i].copy);
 		i++;
 	}
+}
+
+int	main(int ac, char **av)
+{
+	struct s_stock_str	*strs;
+
+	if (ac >= 1)
+	{
+		strs = ft_strs_to_tab(ac, av);
+		ft_show_tab(strs);
+	}
+	return (0);
 }
 
 // int	main(int ac, char **av)
